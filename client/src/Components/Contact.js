@@ -1,43 +1,52 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 
 const Contact = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const formSubmitted = useCallback(
+    (event) => {
+      event.preventDefault();
+      const data = {
+        email,
+        message,
+      };
+      console.log(data);
+    },
+    [email, message]
+  );
+
   return (
     <>
-      <div className="feature col container mt-5">
-        <div className="bg-dark feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img
-            src="https://is.gd/aGN2DK"
-            className="rounded-circle bi"
-            width="50px"
-            height="50px"
-            alt="people"
+      <form className="container" onSubmit={formSubmitted}>
+        <div className="mb-3 mt-5">
+          <label className="form-label">Email</label>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="enter your email"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
           />
         </div>
-        <h3 className="fs-2">Vikas Mesrham</h3>
-        <p>
-          Self motivated and hardworking fresher seeking for an opportunity to
-          work challenging environment to prove my skills and utilize my
-          knowledge and intelligence
-        </p>
-        <p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.linkedin.com/in/vikas-meshram-639099221/"
-            className="btn btn-primary my-2"
-          >
-            Linkedin
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://github.com/VikasMeshram2708"
-            className="btn btn-secondary my-2 mx-2"
-          >
-            Github
-          </a>
-        </p>
-      </div>
+        <div className="mb-3 mt-5">
+          <label className="form-label">Message</label>
+          <textarea
+            type="text"
+            className="form-control"
+            placeholder="enter you message"
+            value={message}
+            onChange={(event) => {
+              setMessage(event.target.value);
+            }}
+          ></textarea>
+        </div>
+        <button className="btn btn-outline-danger w-100 rounded fs-5">
+          Submit
+        </button>
+      </form>
     </>
   );
 };
