@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -46,13 +47,15 @@ const Navbar = () => {
             <form className="d-flex">
               <button
                 className="btn btn-outline-danger rounded fs-5 my-2 my-sm-0"
-                type="submit"
+                type="button"
+                onClick={() => navigate("/SignUp")}
               >
                 Sign Up
               </button>
               <button
                 className="btn btn-outline-warning rounded fs-5 my-2 mx-2 my-sm-0"
-                type="submit"
+                type="button"
+                onClick={() => navigate("/SignIn")}
               >
                 Sign In
               </button>
