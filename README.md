@@ -8,11 +8,10 @@
 
 ### Todo on Backend Side
 
-[ ] Sign Up will have
-
-    [x] Name
-    [x] Email
-    [x] Password
-    [x] Github Profile Link
-    [x] Linedin Profile Link
-    [x] Image Uri of the User
+[x] Sign Up will have
+[x] Name
+[x] Email
+[x] Password
+[x] Github Profile Link
+[x] Linedin Profile Link
+[x] Image Uri of the User
