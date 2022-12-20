@@ -7,6 +7,7 @@ const Contact = () => {
   const formSubmitted = useCallback(
     (event) => {
       event.preventDefault();
+
       const data = {
         email,
         message,

@@ -20,11 +20,31 @@ router.post("/createUser", async (req, res) => {
     // validate the body
     const user = await Schema.validateAsync(req.body);
     if (user) {
+      // check if github,linkedin & iamge uri are unique
+      const gitURi = await User.findOne({ github: req.body.github });
+      const linkedin = await User.findOne({ linkedin: req.body.linkedin });
+      const image = await User.findOne({ image: req.body.image });
+
       // check if email already exist
       const isExist = await User.findOne({ email: req.body.email });
       if (isExist) {
         return res.status(422).json({
           message: "User already registered",
+        });
+      }
+      if (gitURi) {
+        return res.status(422).json({
+          message: "Git Profile uri already registered",
+        });
+      }
+      if (linkedin) {
+        return res.status(422).json({
+          message: "Linedin Profile uri already registered",
+        });
+      }
+      if (image) {
+        return res.status(422).json({
+          message: "Image uri already registered",
         });
       }
       //   hash th password

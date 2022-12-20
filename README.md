@@ -4,22 +4,15 @@
 
 [x] Full restructure the Client Side with new Bootswatch theme
 
-[ ] Use Context Hook
+[x] Use Context Hook
 
-[ ] Clear the form after we hit the submit button
-
-[ ] Change the Submit button name to Add Note
-
-[ ] Re-create the backend for user having
-an image and notes counter and
-
-[ ] Add Github and linkedin profile while signinig up
+### Todo on Backend Side
 
 [ ] Sign Up will have
 
-    [ ] Name
-    [ ] Email
-    [ ] Password
-    [ ] Github Profile Link
-    [ ] Linedin Profile Link
-    [ ] Image Uri of the User
+    [x] Name
+    [x] Email
+    [x] Password
+    [x] Github Profile Link
+    [x] Linedin Profile Link
+    [x] Image Uri of the User
