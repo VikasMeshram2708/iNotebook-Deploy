@@ -31,12 +31,13 @@ router.post("/createNote", fetchuser, async (req, res) => {
       // insert to DB
       if (notes) {
         // insert to DB
-        notes.created_on = new Date().toLocaleString();
+        const created_on = new Date().toLocaleString();
         const createdNote = await Notes.insert({
           user,
           title,
           description,
           tag,
+          created_on,
         });
         return res.status(201).json({
           message: "Note Created",

@@ -2,22 +2,22 @@
 
 ## Future Updated will be...
 
-[ x] Full restructure the Client Side with new Bootswatch theme
+[x] Full restructure the Client Side with new Bootswatch theme
 
-[ x ] Use Context Hook
+[x] Use Context Hook
 
-### Todo on Backend Side
+[x] Sign Up will have
 
-[ x ] Sign Up will have
+[x] Name
 
-[ x ] Name
+[x] Email
 
-[ x ] Email
+[x] Password
 
-[ x ] Password
+[x] Github Profile Link
 
-[ x ] Github Profile Link
+[x] Linedin Profile Link
 
-[ x ] Linedin Profile Link
+[x] Image Uri of the User
 
-[ x ] Image Uri of the User
+[x] Changed the Notes Route and Auth Route
