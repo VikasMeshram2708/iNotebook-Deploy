@@ -2,22 +2,26 @@
 
 ## Future Updated will be...
 
-[x] Full restructure the Client Side with new Bootswatch theme
+- [x] Full restructure the Client Side with new Bootswatch theme
+-
+- [x] Use Context Hook
+-
+- [x] Sign Up will have
+-
+- [x] Name
+-
+- [x] Email
+-
+- [x] Password
+-
+- [x] Github Profile Link
+-
+- [x] Linedin Profile Link
+-
+- [x] Image Uri of the User
+-
+- [x] Changed the Notes Route and Auth Route
 
-[x] Use Context Hook
-
-[x] Sign Up will have
-
-[x] Name
-
-[x] Email
-
-[x] Password
-
-[x] Github Profile Link
-
-[x] Linedin Profile Link
-
-[x] Image Uri of the User
-
-[x] Changed the Notes Route and Auth Route
+* There is an issue on Front end
+* Fixing it later...
+* Now only pushing the server side code and removing the front end code

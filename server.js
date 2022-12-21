@@ -16,10 +16,10 @@ app.use(volleyball);
 app.use("/api/v1/auth", require("./Routes/auth"));
 app.use("/api/v1/notes", require("./Routes/notes"));
 
-app.use(express.static(path.join(__dirname, "./client/build")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.use(express.static(path.join(__dirname, "./client/build")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // connection
 app.listen(port, () => {
